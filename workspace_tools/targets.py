@@ -609,6 +609,12 @@ class MTS_GAMBIT(Target):
         self.is_disk_virtual = True
         self.default_toolchain = "ARM"
 
+class PIXIE_LRS(NRF51822):
+    def __init__(self):
+        NRF51822.__init__(self)
+        self.extra_labels = ['NORDIC', 'MCU_NRF51822']
+        self.macros = ['TARGET_NRF51822']
+
 # Get a single instance for each target
 TARGETS = [
     LPC2368(),
@@ -658,6 +664,7 @@ TARGETS = [
     RBLAB_NRF51822(),
     GHI_MBUINO(),
     MTS_GAMBIT(),
+    PIXIE_LRS(),
 ]
 
 # Map each target name to its unique instance
