@@ -516,6 +516,15 @@ class DISCO_F407VG(Target):
         self.default_toolchain = "uARM"
 
 
+class PIXIE(Target):
+    def __init__(self):
+        Target.__init__(self)
+        self.core = "Cortex-M4F"
+        self.extra_labels = ['STM', 'STM32F4', 'STM32F407', 'STM32F407VG']
+        self.supported_toolchains = ["GCC_ARM"]
+        self.default_toolchain = "uARM"
+
+
 class DISCO_F303VC(Target):
     def __init__(self):
         Target.__init__(self)
@@ -658,6 +667,7 @@ TARGETS = [
     RBLAB_NRF51822(),
     OC_MBUINO(),
     MTS_GAMBIT(),
+    PIXIE(),
 ]
 
 # Map each target name to its unique instance
