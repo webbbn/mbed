@@ -848,6 +848,18 @@ TESTS = [
         "automated": False,
         "mcu": ["LPC1768", "LPC2368", "LPC11U24"]
     },
+    {
+        "id": "PIXIE", "description": "Pixie Firmware",
+        "source_dir": join(TEST_DIR, "mbed", "pixie"),
+        "dependencies": [MBED_LIBRARIES, TEST_MBED_LIB],
+        "automated": False,
+    },
+    {
+        "id": "PIXIE_LRS", "description": "Pixie LRS Firmware",
+        "source_dir": join(TEST_DIR, "mbed", "pixie_lrs"),
+        "dependencies": [MBED_LIBRARIES, TEST_MBED_LIB],
+        "automated": False,
+    },
 ]
 
 # Group tests with the same goals into categories
